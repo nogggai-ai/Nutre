@@ -52,7 +52,7 @@ function validateForm(form) {
 
 function buildMessage(data) {
   const lines = [
-    `Обратный звонок — сайт Алан Ногаев`,
+    `Обратный звонок — сайт Аланы Ногаевой`,
     `Имя: ${data.name}`,
     `Телефон: ${data.phone}`,
     data.time ? `Удобное время: ${data.time}` : null,
