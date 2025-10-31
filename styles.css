@@ -253,6 +253,13 @@ img, svg, video { max-width: 100%; height: auto; }
   .hero { padding: 40px 0 28px; }
   .section { padding: 40px 0; }
   .card3d { max-width: 340px; height: 260px; }
+  /* фикс переполнения шапки: делаем навигацию прокручиваемой, скрываем переключатель темы */
+  .header-inner { gap: 6px; }
+  .nav { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { margin: 0 10px; font-size: 14px; }
+  #themeToggle { display: none; }
+  .btn-call { height: 40px; padding: 0 12px; }
 }
 
 @media (max-width: 360px) {
