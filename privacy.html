@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Политика конфиденциальности — Алан Ногаев</title>
+    <meta name="color-scheme" content="dark light" />
+    <style>
+      :root{--bg:#0f1221;--text:#e9ecf5;--muted:#b6bdd3;--panel:#14182b}
+      html,body{margin:0;padding:0}
+      body{font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+      .container{max-width:900px;margin:0 auto;padding:24px}
+      a{color:#9fd1ff}
+      h1,h2{margin-top:0}
+      .paper{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:18px}
+      .muted{color:var(--muted)}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Политика конфиденциальности</h1>
+      <div class="paper">
+        <p class="muted">Последнее обновление: <span id="d"></span></p>
+        <p>
+          Этот сайт собирает и обрабатывает минимальный объём персональных данных, которые вы
+          добровольно оставляете при отправке формы обратного звонка: имя, телефон, удобное время,
+          комментарий и предпочитаемый способ связи.
+        </p>
+        <h2>Цели обработки</h2>
+        <ul>
+          <li>обратная связь и консультация по вашему запросу;</li>
+          <li>подготовка индивидуальных рекомендаций;</li>
+          <li>улучшение качества сервиса.</li>
+        </ul>
+        <h2>Хранение и передача</h2>
+        <p>
+          Данные не передаются третьим лицам без вашего согласия. Информация хранится только столько,
+          сколько необходимо для связи с вами и оказания услуги.
+        </p>
+        <h2>Ваши права</h2>
+        <p>
+          Вы можете запросить уточнение, обновление или удаление ваших данных, написав на
+          <a href="mailto:alan@example.com">alan@example.com</a>.
+        </p>
+        <p class="muted">
+          Отправляя форму на сайте, вы подтверждаете согласие на обработку персональных данных в указанных целях.
+        </p>
+        <p>
+          <a href="index.html">Вернуться на сайт</a>
+        </p>
+      </div>
+    </div>
+    <script>
+      document.getElementById('d').textContent = new Date().toLocaleDateString('ru-RU');
+    </script>
+  </body>
+  </html>
+
+

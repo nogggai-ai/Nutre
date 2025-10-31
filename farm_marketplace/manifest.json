@@ -1,0 +1,29 @@
+{
+  "name": "Фермерский Маркетплейс",
+  "short_name": "ФермерМаркет",
+  "description": "Свежие продукты прямо с фермы",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2E7D32",
+  "theme_color": "#2E7D32",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "shopping", "business"],
+  "lang": "ru",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

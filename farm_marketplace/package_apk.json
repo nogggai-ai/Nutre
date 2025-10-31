@@ -1,0 +1,40 @@
+{
+  "name": "farm-marketplace-apk-creator",
+  "version": "1.0.0",
+  "description": "Создание готового APK файла для Фермерского Маркетплейса",
+  "main": "create_apk.js",
+  "scripts": {
+    "create-apk": "node create_apk.js",
+    "start": "node create_apk.js",
+    "build": "node create_apk.js"
+  },
+  "keywords": [
+    "flutter",
+    "apk",
+    "android",
+    "farm",
+    "marketplace",
+    "mobile",
+    "creator"
+  ],
+  "author": "Farm Marketplace Team",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farm-marketplace/apk-creator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/farm-marketplace/apk-creator/issues"
+  },
+  "homepage": "https://github.com/farm-marketplace/apk-creator#readme"
+}

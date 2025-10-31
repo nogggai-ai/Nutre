@@ -1,0 +1,53 @@
+[package]
+name = "farm-marketplace-apk-creator"
+version = "1.0.0"
+edition = "2021"
+authors = ["Farm Marketplace Team <team@farmmarketplace.com>"]
+description = "Создание готового APK файла для Фермерского Маркетплейса"
+license = "MIT"
+repository = "https://github.com/farm-marketplace/apk-creator"
+homepage = "https://github.com/farm-marketplace/apk-creator"
+documentation = "https://github.com/farm-marketplace/apk-creator#readme"
+keywords = ["flutter", "apk", "android", "farm", "marketplace", "mobile", "creator"]
+categories = ["development-tools", "build-utils"]
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+indicatif = "0.17"
+colored = "2.0"
+anyhow = "1.0"
+thiserror = "1.0"
+zip = "0.6"
+flate2 = "1.0"
+tar = "0.4"
+walkdir = "2.3"
+glob = "0.3"
+regex = "1.7"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4"] }
+log = "0.4"
+env_logger = "0.10"
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockito = "1.0"
+tempfile = "3.0"
+
+[[bin]]
+name = "farm-apk-creator"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.dev]
+opt-level = 0
+debug = true
+overflow-checks = true
