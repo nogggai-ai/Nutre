@@ -1,0 +1,27 @@
+# Игнорировать всё по умолчанию
+*
+
+# Разрешить необходимые файлы сайта
+!.gitignore
+!.nojekyll
+!index.html
+!styles.css
+!script.js
+!privacy.html
+!robots.txt
+!sitemap.xml
+!site.webmanifest
+!404.html
+!open_local.bat
+!netlify.toml
+
+# Папка с ассетами
+!assets/
+!assets/**
+
+# GitHub Actions
+!.github/
+!.github/workflows/
+!.github/workflows/pages.yml
+
+
