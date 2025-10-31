@@ -24,7 +24,10 @@ body {
   background: radial-gradient(1200px 600px at 10% 0%, #0f231d 0%, var(--bg) 60%, #0a1613 100%);
   color: var(--text);
   line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
 }
+
+img, svg, video { max-width: 100%; height: auto; }
 
 :root[data-theme="light"] {
   --bg: #f7fbf9;
@@ -60,7 +63,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  min-height: 64px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -70,10 +75,11 @@ body {
   letter-spacing: 0.2px;
 }
 
+.nav { display: flex; flex-wrap: wrap; gap: 8px; }
 .nav a {
   color: var(--muted);
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 8px;
 }
 .nav a:hover {
   color: var(--text);
@@ -115,7 +121,7 @@ body {
   align-items: center;
 }
 .hero h1 {
-  font-size: 40px;
+  font-size: clamp(28px, 4.6vw + 8px, 40px);
   line-height: 1.2;
   margin: 0 0 12px;
 }
@@ -156,6 +162,7 @@ body {
 }
 
 .section { padding: 56px 0; }
+.section { scroll-margin-top: 72px; }
 .grid-2 { display: grid; gap: 36px; grid-template-columns: 1fr 1fr; align-items: start; }
 
 .about-highlights { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }
@@ -221,7 +228,7 @@ body {
 .footer-phone:hover { color: var(--text); }
 
 /* Floating action button */
-.fab { position: fixed; right: 20px; bottom: 20px; z-index: 60; display: grid; gap: 8px; justify-items: end; }
+.fab { position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 60; display: grid; gap: 8px; justify-items: end; }
 .fab-main { height: 48px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 88%, #fff 8%), color-mix(in oklab, var(--brand-2) 88%, #fff 8%)); color: #0b1220; font-weight: 800; cursor: pointer; }
 .fab-menu { display: none; }
 .fab.open .fab-menu { display: grid; gap: 6px; }
@@ -239,6 +246,19 @@ body {
   .hero h1 { font-size: 32px; }
   .cards { grid-template-columns: 1fr; }
   .cards-testimonials { grid-template-columns: 1fr; }
+  .cta .btn { flex: 1 1 160px; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 40px 0 28px; }
+  .section { padding: 40px 0; }
+  .card3d { max-width: 340px; height: 260px; }
+}
+
+@media (max-width: 360px) {
+  .logo { font-size: 14px; }
+  .btn { height: 42px; padding: 0 14px; }
+  .hero h1 { font-size: 28px; }
 }
 
 /* Cart Styles */
