@@ -20,10 +20,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Prepare dist
+        run: |
+          set -e
+          mkdir -p dist
+          cp -v index.html styles.css script.js privacy.html robots.txt sitemap.xml site.webmanifest 404.html dist/
+          mkdir -p dist/assets
+          cp -vr assets/* dist/assets/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'dist'
 
   deploy:
     needs: build
