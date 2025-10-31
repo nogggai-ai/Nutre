@@ -171,11 +171,18 @@ img, svg, video { max-width: 100%; height: auto; }
 .hl-text { color: var(--muted); }
 
 .services h2, .about h2, .credentials h2, .contact h2 { margin-top: 0; }
+.benefits h2, .approach h2, .process h2 { margin-top: 0; }
 .cards { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
 .card { background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03)); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 18px; }
 .card h3 { margin-top: 0; }
 .list { margin: 0; padding-left: 18px; }
 .note { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 16px; color: var(--muted); }
+
+/* Process */
+.steps { counter-reset: step; list-style: none; padding-left: 0; display: grid; gap: 12px; }
+.steps li { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 12px 14px; }
+.steps li strong { color: var(--text); }
 
 /* Programs */
 .programs .cards-programs { align-items: stretch; }
